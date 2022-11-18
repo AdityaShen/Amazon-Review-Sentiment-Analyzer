@@ -27,7 +27,10 @@ def app():
     st.text("")
     string3 = st.text_input("Enter 3rd URL", max_chars=500, )
     
-    urllist=[string1,string2]
+    st.write("")
+    st.write("")
+    urllist=[string1,string2,string3,]
+    
  
     e= Extractor.from_yaml_file('selectors.yml')
 
@@ -59,13 +62,15 @@ def app():
     # Pass the HTML of the page and create 
         return e.extract(r.text)
 
-    button=st.button("Click Me")
+    button=st.button("Extract Review Data")
     if button:
 # product_data = []
         with open('data.csv','w',encoding="utf8",newline='') as outfile:
             writer = csv.DictWriter(outfile, fieldnames=["title","content","product"])
             writer.writeheader()
             for url in urllist:
+                if url=="":
+                    continue
                 data = scrape(url) 
                 if data:
                     for r in data['reviews']:
@@ -83,7 +88,7 @@ def app():
                 #r['date'] = dateparser.parse(date_posted).strftime('%d %b %Y')
                         writer.writerow(r)
                     sleep(5) 
-       
+        
     
   
     
