@@ -4,7 +4,7 @@ def app():
 # Create an empty container
     placeholder = st.empty()
 
-    actual_email = "email"
+    actual_email = "adityashenoy@gmail.com"
     actual_password = "password"
 
 # Insert a form in the container
