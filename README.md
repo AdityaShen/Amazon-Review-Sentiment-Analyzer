@@ -1,4 +1,4 @@
-#Comment Sentiment Analyzer#
+#Comment Sentiment Analyzer
 
 This is an Amazon review Sentimment Analyzer - Scrutiny
 
@@ -32,4 +32,7 @@ The extracted product reviews from the link:
 Analysis of the product reviews:
 
 ![image](https://user-images.githubusercontent.com/79261869/222919937-2160e78e-0583-45f2-bbd5-ee6d3ac17c43.png)
+
+
+Thanks For Reading 😃
 
